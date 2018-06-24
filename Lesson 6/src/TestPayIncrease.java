@@ -24,7 +24,7 @@ public class TestPayIncrease {
 					currentEmployee.increasePay(30);
 				} else if (p instanceof Contractor) {
 					currentContractor = (Contractor) p;
-					currentContractor.increasePay(30);
+					currentContractor.increasePay(40);
 				}	
 			}	
 	}

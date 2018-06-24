@@ -9,7 +9,7 @@ public class Employee extends Person implements Payable {
 
 	@Override
 	public boolean increasePay(int percent) {
-		// TODO Auto-generated method stub
+			System.out.println("Increasing salary by " + percent + "% for  " + getName());
 		return false;
 	}
 
