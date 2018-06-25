@@ -13,7 +13,8 @@ public class HelloWorld extends JFrame {
 		myWindow.add(myButton);
 		myWindow.setSize(200, 300);
 		myWindow.setTitle("Hello World!");
-		myWindow.setVisible(true);	
+		myWindow.setVisible(true);
+		//myWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 
 }
