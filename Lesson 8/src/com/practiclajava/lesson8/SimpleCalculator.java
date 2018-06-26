@@ -1,6 +1,7 @@
 package com.practiclajava.lesson8;
 
 import java.awt.FlowLayout;
+import java.awt.GridLayout;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -15,8 +16,8 @@ public class SimpleCalculator {
 		JPanel windowContent = new JPanel();
 		
 		//Set a layout manager for this panel
-		FlowLayout fl = new FlowLayout();
-		windowContent.setLayout(fl);
+		GridLayout gl = new GridLayout(4,2);
+		windowContent.setLayout(gl);
 		
 		//Create controls in memory
 		JLabel label1 = new JLabel("Number 1:");
@@ -25,7 +26,6 @@ public class SimpleCalculator {
 		JTextField field2 = new JTextField(10);		
 		JLabel label3 = new JLabel("Sum:");
 		JTextField result = new JTextField(10);
-		
 		JButton go = new JButton("Add");
 		
 		//Add controls to panel
