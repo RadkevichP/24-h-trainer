@@ -79,7 +79,9 @@ public class Calculator extends JFrame {
 		addComponent(windowContent, buttons[11], 4, 4, 2, 1);
 		addComponent(windowContent, buttons[15], 4, 6, 2, 1);
 		
-		
+		CalculatorEngine calcEngine = new CalculatorEngine();
+		buttons[1].addActionListener(calcEngine);
+		buttons[2].addActionListener(calcEngine);
 		
 		//set the frame content
 		setContentPane(windowContent);
