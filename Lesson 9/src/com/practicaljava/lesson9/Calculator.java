@@ -21,6 +21,17 @@ public class Calculator extends JFrame {
 	private GridBagLayout gridBagLayout;
 	private GridBagConstraints constraints;
 	
+	//get actual text from TextField
+	public String getDisplayFieldText() {
+		return displayField.getText();
+	}
+	
+	//set the text into the TextField
+	public void setDisplayFieldText(String text) {
+		this.displayField.setText(text);
+	}
+	
+	//constructor creates the instance of calculator and adds all the components to the layout 
 	Calculator() {
 		super("Calculator");
 		
@@ -81,7 +92,7 @@ public class Calculator extends JFrame {
 		
 		//link UI with calculator engine
 		
-		CalculatorEngine calcEngine = new CalculatorEngine();
+		CalculatorEngine calcEngine = new CalculatorEngine(this);
 		
 		for(JButton b: buttons) {
 			b.addActionListener(calcEngine);
@@ -94,7 +105,6 @@ public class Calculator extends JFrame {
 		
 		//action when closing
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
 		
 		
 	}
