@@ -3,7 +3,7 @@ package com.practicaljava.lesson13;
 public class Person {
 
 	private String name;
-	private char workerStatus; // 'E' or 'C'
+	private char workerStatus; // 'E' or 'C' or 'F'
 	
 	public Person(String name, char workerStatus) {
 		this.name = name;
