@@ -36,40 +36,42 @@ public class OrderWindow extends JFrame {
 		JComboBox nameBox = new JComboBox(bikeNames);
 
 		// connect nameBox with ActionListener
-		nameBox.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent event) {
+
+		/*
+		 * nameBox.addActionListener(new ActionListener() { public void
+		 * actionPerformed(ActionEvent event) { JComboBox combo = (JComboBox)
+		 * event.getSource(); selectedName = combo.getSelectedItem().toString(); } });
+		 */
+
+		nameBox.addActionListener(event -> {
+			{
 				JComboBox combo = (JComboBox) event.getSource();
 				selectedName = combo.getSelectedItem().toString();
 			}
 		});
-		
+
 		JLabel quantityLabel = new JLabel("Quantity: ");
 		final JTextField quantityField = new JTextField(20);
 
 		JButton orderButton = new JButton("Order");
 		final JLabel orderStatus = new JLabel("");
-		
-		//connect orderButton with ActionListener
-		orderButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent event) {
 
-				try {
-					if (selectedName == "") {
-						orderStatus.setText("Please choose model!");
-					} else {
-						bikeQuantity = Integer.parseInt(quantityField.getText());
-						bikeOrder.validateOrder(selectedName, bikeQuantity);
-						orderStatus.setText(bikeOrder.getOrder());
-					}
-
-				} catch (NumberFormatException e) {
-					orderStatus.setText("Quantity must be a number!");
-				} catch (TooManyBikesException tmbe) {
-					orderStatus.setText(tmbe.getMessage());
+		// connect orderButton with ActionListener
+		orderButton.addActionListener(event -> {
+			try {
+				if (selectedName == "") {
+					orderStatus.setText("Please choose model!");
+				} else {
+					bikeQuantity = Integer.parseInt(quantityField.getText());
+					bikeOrder.validateOrder(selectedName, bikeQuantity);
+					orderStatus.setText(bikeOrder.getOrder());
 				}
 
+			} catch (NumberFormatException e) {
+				orderStatus.setText("Quantity must be a number!");
+			} catch (TooManyBikesException tmbe) {
+				orderStatus.setText(tmbe.getMessage());
 			}
-
 		});
 
 		// add all GUI components to the panel
