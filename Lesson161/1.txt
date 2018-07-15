@@ -1,0 +1,3 @@
+java -classpath d:\PracticalJava\workplace\Lesson161\bin\ com.oracle.knockjokeserver.KnockKnockServer 3000
+
+java -classpath d:\PracticalJava\workplace\Lesson161\bin\ com.oracle.knockjokeserver.KnockKnockClient localhost 3000
