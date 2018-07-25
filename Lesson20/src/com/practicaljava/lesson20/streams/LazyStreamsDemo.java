@@ -1,7 +1,9 @@
 package com.practicaljava.lesson20.streams;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.DoubleStream;
 import java.util.stream.Stream;
 
@@ -28,24 +30,39 @@ public class LazyStreamsDemo {
 		
 		List<Beer> beers = loadCellar();
 		
-		//first intermediate operation
-		Stream<Beer> americanBeers = beers.stream()
-				.filter(brss -> {
-					System.out.println("Inside filter: " + brss.country);
-					return "USA".equals(brss.country);
-				});
+		/*beers.stream()
+			.sorted(Comparator.comparing(b -> b.price))
+			.forEach(System.out::println);
 		
-		//second intermediate operation
-		DoubleStream americanBeerPrices = americanBeers
-				.mapToDouble(brrr -> {
-					System.out.println("Inside mapToDouble: "
-							+ brrr.price);
-					return brrr.price;
-				});
+		beers.stream()
+			.sorted(Comparator.comparing((Beer b) -> b.country)
+					.thenComparing(b -> b.price))
+			.forEach(System.out::println);
+		*/
+		List<Beer> sortedBeers = beers.stream()
+				.sorted(Comparator.comparing(b -> b.price))
+				.collect(Collectors.toList());
 		
-		//terminal operation
-		System.out.println("The average American beer price is $" + 
-				americanBeerPrices.average().getAsDouble());
+		sortedBeers.forEach(System.out::println);
+		
+		/*
+		System.out.println("===Sorting by ascending price");
+		beers.sort(Comparator.comparing(beer -> beer.price));
+		beers.forEach(System.out::println);
+		
+		System.out.println("===Sorting by descending price");
+		
+		Comparator<Beer> priceComparator = Comparator.comparing(beer -> beer.price);
+		beers.sort(priceComparator.reversed());
+		beers.forEach(System.out::println);
+		
+		System.out.println("Sorting by name and price");
+		beers.sort(Comparator.comparing((Beer beer) -> beer.name).thenComparing(beer -> beer.price));
+		beers.forEach(System.out::println);
+		*/
+		
+		
+		
 
 	}
 
