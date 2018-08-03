@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Hello/src"/>
+	<classpathentry kind="src" path="Lesson 10/src"/>
+	<classpathentry kind="src" path="Lesson 11/src"/>
+	<classpathentry kind="src" path="Lesson 12/src"/>
+	<classpathentry kind="src" path="Lesson 13/src"/>
+	<classpathentry kind="src" path="Lesson 14/src"/>
+	<classpathentry kind="src" path="Lesson 15/src"/>
+	<classpathentry kind="src" path="Lesson 16/src"/>
+	<classpathentry kind="src" path="Lesson 3/src"/>
+	<classpathentry kind="src" path="Lesson 4/bin/com/practicaljava/lesson4"/>
+	<classpathentry kind="src" path="Lesson 4/src"/>
+	<classpathentry kind="src" path="Lesson 5/src"/>
+	<classpathentry kind="src" path="Lesson 6/src"/>
+	<classpathentry kind="src" path="Lesson 7/src"/>
+	<classpathentry kind="src" path="Lesson 8/src"/>
+	<classpathentry kind="src" path="Lesson 9/src"/>
+	<classpathentry kind="src" path="Lesson161/src"/>
+	<classpathentry kind="src" path="Lesson17/src"/>
+	<classpathentry kind="src" path="Lesson20/src"/>
+	<classpathentry kind="src" path="Lesson21/src"/>
+	<classpathentry kind="src" path="Lesson23/src"/>
+	<classpathentry kind="src" path="Lessons8_9/src"/>
+	<classpathentry kind="output" path="Hello/bin"/>
+</classpath>
